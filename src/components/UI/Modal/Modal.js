@@ -12,14 +12,14 @@ const Modal = (props) => (
         >
             <div className="modal-header">
                 <span>{props.title}</span>
-                <span className="modal-close">X</span>
+                <span onClick={props.hide} className="modal-close">X</span>
             </div>
             <div className="modal-text">
                 {props.children}
             </div>
             <div className='modal-footer'>
-                <button className="modal-btn close-btn">Close</button>
-                <button className="modal-btn okay-btn">Okay</button>
+                <button onClick={props.hide} className="modal-btn close-btn">Close</button>
+                <button onClick={props.hide} className="modal-btn okay-btn">Okay</button>
             </div>
         </div>
         <Backdrop show={props.show}/>

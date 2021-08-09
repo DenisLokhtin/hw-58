@@ -8,17 +8,43 @@ function App() {
     const [showAlert, setShowAlert] = useState(false);
 
     const showModalHandler = () => {
-        setShowModal(!showModal);
+        setShowModal(true);
+    };
+
+    const hideModalHandler = () => {
+        setShowModal(false);
+    };
+
+    const showAlertHandler = () => {
+        setShowAlert(true);
+    };
+
+    const hideAlertHandler = () => {
+        setShowAlert(false);
+    };
+
+    const close = () => {
+        alert('CLOSE');
+    };
+
+    const okay = () => {
+        alert('OKAY')
     };
 
     return (
         <>
-            <Modal show={showModal} title="Modal title">
+            <Modal okay={okay} close={close} hide={hideModalHandler} show={showModal} title="Modal title">
                 Modal text
             </Modal>
-            <Alert show={showAlert} type="primary">
+
+            <Alert dismiss={hideAlertHandler} show={showAlert} type="primary">
                 <p>Alert text</p>
             </Alert>
+
+            <div className="btns">
+                <button onClick={showAlertHandler}>Показать Alert</button>
+                <button onClick={showModalHandler}>Показать Modal</button>
+            </div>
         </>
     );
 }

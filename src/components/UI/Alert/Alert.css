@@ -4,6 +4,10 @@
     padding: 5px;
     border-radius: 5px;
     margin: 20px;
+    position: fixed;
+    left: 40%;
+    top: 30%;
+    z-index: 9995;
 }
 
 .alert-close {
@@ -12,6 +16,7 @@
     user-select: none;
     font-size: 15px;
     margin: 2px;
+    padding: 5px;
 }
 
 .alert-text {

@@ -1,6 +1,14 @@
 import React from 'react';
 import './Alert.css';
 
+const dismiss = (dismiss) => {
+    if (dismiss !== undefined) {
+        return <span onClick={dismiss} className="alert-close">X</span>
+    } else {
+        return null
+    }
+}
+
 const Alert = (props) => (
     <div
         className={props.type + " " + "Alert"}
@@ -9,7 +17,7 @@ const Alert = (props) => (
         }}
     >
         <div>
-            <span className="alert-close">X</span>
+            {dismiss(props.dismiss)}
         </div>
         <div className="alert-text">
             {props.children}
