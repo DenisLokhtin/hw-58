@@ -18,8 +18,8 @@ const Modal = (props) => (
                 {props.children}
             </div>
             <div className='modal-footer'>
-                <button onClick={props.hide} className="modal-btn close-btn">Close</button>
-                <button onClick={props.hide} className="modal-btn okay-btn">Okay</button>
+                <button onClick={() => {props.hide(); props.close()}} className="modal-btn close-btn">Close</button>
+                <button onClick={() => {props.hide(); props.okay()}} className="modal-btn okay-btn">Okay</button>
             </div>
         </div>
         <Backdrop show={props.show}/>
