@@ -1,0 +1,39 @@
+.Alert {
+    width: 375px;
+    height: auto;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.alert-close {
+    float: right;
+    cursor: pointer;
+    user-select: none;
+    font-size: 15px;
+    margin: 2px;
+}
+
+.alert-text {
+    margin-left: 5px;
+}
+
+.primary {
+    color: #00429A;
+    background-color: #CFE2FF;
+}
+
+.success {
+    color: #0E5231;
+    background-color: #D0E7DD;
+}
+
+.danger {
+    color: #841F2A;
+    background-color: #F9D7DA;
+}
+
+.warning {
+    color: #6E4C02;
+    background-color: #FFF3CD;
+}
